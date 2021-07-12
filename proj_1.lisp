@@ -1,0 +1,16 @@
+(print "Input you number => ")
+(defvar *user_input* (read))
+(defvar *odd_count* 0)
+(defvar *even_count* 0)
+(defun count_num (num)
+	(if (oddp num)
+		(setq *odd_count* (+ *odd_count* 1))
+		(setq *even_count* (+ *even_count* 1))
+		)
+
+)
+(loop for x from 1 to *user_input*
+   do (count_num x)
+)
+(format t "Odd number count: ~a ~%" *odd_count*)
+(format t "Even number count: ~a ~%" *even_count*)
